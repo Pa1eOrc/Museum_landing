@@ -23,9 +23,6 @@
     @include onTablet {
       background-size: cover;
     }
-
-    @include onDesctop {
-    }
   }
 
   &__menu {

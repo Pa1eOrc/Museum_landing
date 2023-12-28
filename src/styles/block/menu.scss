@@ -3,6 +3,7 @@
 
   &__section {
     display: flex;
+    justify-content: center;
     align-items: center;
     background-color: $border-color;
     padding: 27px 20px;
@@ -58,6 +59,7 @@
       top: 45px;
       width: 24px;
       height: 24px;
+      z-index: 2;
     }
   }
 
