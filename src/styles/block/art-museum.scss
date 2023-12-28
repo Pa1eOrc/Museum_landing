@@ -44,6 +44,7 @@
     color: $text-color-2;
     text-transform: uppercase;
     transform: rotate(-90deg);
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       text-shadow: 0 0 1px $text-color-2;

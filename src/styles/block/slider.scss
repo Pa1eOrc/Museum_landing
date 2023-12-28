@@ -1,19 +1,79 @@
 .slider {
-  display: flex;
-  height: 100%;
-  width: 500%;
+  &__container {
+    display: flex;
+    height: 410px;
+    gap: 16px;
+    width: 500%;
+    padding-left: 20px;
 
-  @include onTablet {
-    width: 100%;
-    gap: 20px;
+    @include onTablet {
+      padding-left: 34px;
+      gap: 20px;
+      height: 543px;
+    }
+
+    @include onDesctop {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 30px;
+      width: 100%;
+      gap: 30px;
+      height: 100%;
+
+      padding-left: 0;
+    }
   }
 
-  @include onDesctop {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 30px;
-    width: 100%;
-    gap: 30px;
+  &__image {
+    width: calc(100vw - 40px);
+    transition: all 0.5s ease-in-out;
+
+    @include onTablet {
+      width: calc(50vw - 40px);
+    }
+
+    @include onDesctop {
+      width: 100%;
+
+      &--second {
+        display: none;
+      }
+
+      &--grid-first {
+        grid-column: 1 / 5;
+      }
+
+      &--grid-second {
+        grid-column: 5 / 13;
+      }
+
+      &--grid-third {
+        grid-column: 1 / 9;
+      }
+
+      &--grid-fourth {
+        grid-column: 9 / 13;
+      }
+    }
+  }
+
+  &__img {
+    width: inherit;
+    height: 100%;
+    object-fit: fill;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      transform: scale(105%);
+    }
+
+    @include onDesctop {
+      object-fit: cover;
+    }
+  }
+
+  &__input {
+    display: none;
   }
 
   &__navigator {
@@ -41,103 +101,47 @@
     &:hover {
       background-color: $border-color;
     }
-  }
-
-  &__input {
-    display: none;
-  }
-
-  &__image {
-    width: 20%;
-    transition: $transition-time;
 
     @include onTablet {
-      width: 100%;
-
-      &:hover {
-        transform: scale(105%);
-        transition: $transition-time;
-      }
-    }
-
-    &--tablet-hidden {
-      @include onTablet {
+      &--last {
         display: none;
       }
-
-      @include onDesctop {
-        display: block;
-      }
-    }
-
-    &--tablet {
-      display: none;
-
-      @include onTablet {
-        display: block;
-      }
-
-      @include onDesctop {
-        display: none;
-      }
-    }
-
-    &--grid-first {
-      grid-column: 1 / 5;
-    }
-
-    &--grid-second {
-      grid-column: 5 / 13;
-    }
-
-    &--grid-third {
-      grid-column: 1 / 9;
-    }
-
-    &--grid-fourth {
-      grid-column: 9 / 13;
-    }
-  }
-
-  &__img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-
-    @include onTablet {
-      object-fit: cover;
     }
 
     @include onDesctop {
-      object-fit: contain;
+      display: none;
     }
   }
+}
 
-  #img1:checked~.slider__image--first {
-    margin-left: 0;
+#img1:checked ~ .slider__image {
+  transform: translateX(0);
+}
+
+#img2:checked ~ .slider__image {
+  transform: translateX(calc(-1 * (100vw - 24px)));
+
+  @include onTablet {
+    transform: translateX(calc(-1 * (50vw - 18px)));
   }
+}
 
-  #img2:checked~.slider__image--first {
-    margin-left: -20%;
+#img3:checked ~ .slider__image {
+  transform: translateX(calc(-1 * (100vw - 24px) * 2));
 
-    @include onTablet {
-      margin-left: 0;
-    }
+  @include onTablet {
+    transform: translateX(calc(-1 * (50vw - 18px) * 2));
   }
+}
 
-  #img3:checked~.slider__image--first {
-    margin-left: -40%;
+#img4:checked ~ .slider__image {
+  transform: translateX(calc(-1 * (100vw - 24px) * 3));
 
-    @include onTablet {
-      margin-left: 0;
-    }
+  @include onTablet {
+    transform: translateX(calc(-1 * (50vw - 18px) * 3));
   }
+}
 
-  #img4:checked~.slider__image--first {
-    margin-left: -60%;
-
-    @include onTablet {
-      margin-left: 0;
-    }
-  }
+#img5:checked ~ .slider__image {
+  transform: translateX(calc(-1 * (100vw - 24px) * 4));
 }

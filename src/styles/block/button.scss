@@ -10,6 +10,14 @@
     justify-content: end;
   }
 
+  &:hover > &__first-section--art {
+    text-shadow: 0 0 1px $text-color;
+  }
+
+  &:hover > &__second-section--art {
+    background-color: #1a493f;
+  }
+
   &--sign {
     @include onTablet {
       justify-content: center;
@@ -28,6 +36,7 @@
     width: 230px;
     height: 50px;
     border: 1px solid $border-color;
+    transition: all 0.2s ease-in-out;
 
     font-weight: 500;
     font-size: 16px;
@@ -35,10 +44,6 @@
     text-transform: uppercase;
     color: $text-color;
     background-color: $text-color-4;
-
-    &:hover {
-      text-shadow: 0 0 1px $text-color;
-    }
 
     @include onTablet {
       width: 200px;
@@ -55,12 +60,16 @@
 
       padding-left: 24px;
 
-      &:hover {
-        background-color: #f7f2f2;
-      }
-
       &::placeholder {
         color: $text-color-2;
+      }
+
+      &:hover {
+        background-color: #f7f2f2;
+
+        &::placeholder {
+          color: $text-color;
+        }
       }
 
       @include onTablet {
@@ -79,15 +88,12 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 
     width: 50px;
     height: 50px;
     background-color: $border-color;
     border: 1px solid $border-color;
-
-    &:hover {
-      background-color: #1a493f;
-    }
 
     &--sign {
       background-color: $button-bgc-red;

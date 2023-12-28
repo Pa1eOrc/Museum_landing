@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
 
-  <body class="page__body">
+  <body class="page" id="page-body">
     <header class="page__header header" id="header">
       <grid class="grid grid--tablet">
         <div class="
@@ -21,9 +21,15 @@
           grid__item--desctop-6-12
         ">
           <div class="header__container">
-            <a title="link" href="#menu" class="header__menu"></a>
+            <a
+              title="link"
+              href="#menu"
+              class="header__menu"></a>
 
-            <a title="link" href="#header" class="header__logo"></a>
+            <a
+              title="link"
+              href="#header"
+              class="header__logo"></a>
           </div>
         </div>
         <div class="
@@ -37,10 +43,14 @@
               Художній музей
             </h1>
             <div class="button">
-              <a href="#events" class="button__first-section">Квитки</a>
+              <a href="#events"
+                class="button__first-section button__first-section--art">
+                Квитки
+              </a>
 
-              <a title="link" href="#events" class="button__second-section">
-                <div class="button__arow"></div>
+              <a title="link" href="#events"
+                class="button__second-section button__second-section--art">
+                <span class="button__arow"></span>
               </a>
             </div>
 
@@ -53,7 +63,7 @@
     </header>
 
     <main class="page__main">
-      <section class="page__section current-events" id="events">
+      <section class="page__current-events current-events" id="events">
         <h2 class="current-events__title">
           Актуальні події
         </h2>
@@ -124,7 +134,7 @@
         </div>
       </section>
 
-      <section class="page__section from-to" id="from-to">
+      <section class="page__from-to from-to" id="from-to">
         <div class="from-to__container">
           <div class="from-to__content">
             <div class="from-to__inner-container">
@@ -144,63 +154,122 @@
         </div>
       </section>
 
-      <section class="page__section gallery" id="gallery">
+      <section class="page__gallery gallery" id="gallery">
         <h2 class="gallery__title">Галерея</h2>
 
         <div class="gallery__container">
           <div class="slider">
-            <input title="slider" class="slider__input" type="radio" name="slider" id="img1"
-              checked>
+            <div class="slider__container">
+              <input
+                title="slider"
+                class="slider__input"
+                type="radio"
+                name="slider"
+                id="img1"
+                checked
+              >
 
-            <input title="slider" class="slider__input" type="radio" name="slider" id="img2">
+              <input
+                title="slider"
+                class="slider__input"
+                type="radio"
+                name="slider"
+                id="img2"
+              >
 
-            <input title="slider" class="slider__input" type="radio" name="slider" id="img3">
+              <input
+                title="slider"
+                class="slider__input"
+                type="radio"
+                name="slider"
+                id="img3"
+              >
 
-            <input title="slider" class="slider__input" type="radio" name="slider" id="img4">
+              <input
+                title="slider"
+                class="slider__input"
+                type="radio"
+                name="slider"
+                id="img4"
+              >
 
-            <div class="
-              slider__image
-              slider__image--first
-              slider__image--grid-first">
-              <img class="slider__img" src="./images/picture4.jpg"
-                alt="gallery picture">
+              <input
+                title="slider"
+                class="slider__input"
+                type="radio"
+                name="slider"
+                id="img5"
+              >
+
+              <div class="
+                slider__image
+                slider__image--grid-first">
+                <img
+                  class="slider__img"
+                  src="./images/picture4.jpg"
+                  alt="gallery picture"
+                >
+              </div>
+
+              <div class="
+                slider__image
+                slider__image--second">
+                <img
+                  class="slider__img"
+                  src="./images/picture9.jpg"
+                  alt="gallery picture"
+                >
+              </div>
+
+              <div class="
+                  slider__image
+                  slider__image--grid-second">
+                <img
+                  class="slider__img"
+                  src="./images/picture3.jpg"
+                  alt="gallery picture"
+                >
+              </div>
+
+              <div class="
+                  slider__image
+                  slider__image--grid-third">
+                <img
+                  class="slider__img"
+                  src="./images/picture2.jpg"
+                  alt="gallery picture"
+                >
+              </div>
+
+              <div class="
+                  slider__image
+                  slider__image--grid-fourth">
+                <img
+                  class="slider__img"
+                  src="./images/picture1.jpg"
+                  alt="gallery picture"
+                >
+              </div>
             </div>
 
-            <div class="slider__image slider__image--tablet">
-              <img class="slider__img" src="./images/picture9.jpg"
-                alt="gallery picture">
+            <div class="slider__navigator">
+              <label for="img1" class="slider__bar"></label>
+              <label for="img2" class="slider__bar"></label>
+              <label for="img3" class="slider__bar"></label>
+              <label for="img4" class="slider__bar"></label>
+              <label for="img5" class="slider__bar slider__bar--last"></label>
             </div>
-
-            <div
-              class="slider__image slider__image--grid-second slider__image--tablet-hidden">
-              <img class="slider__img" src="./images/picture3.jpg"
-                alt="gallery picture">
-            </div>
-
-            <div
-              class="slider__image slider__image--grid-third slider__image--tablet-hidden">
-              <img class="slider__img" src="./images/picture2.jpg"
-                alt="gallery picture">
-            </div>
-
-            <div
-              class="slider__image slider__image--grid-fourth slider__image--tablet-hidden">
-              <img class="slider__img" src="./images/picture1.jpg"
-                alt="gallery picture">
-            </div>
-          </div>
-
-          <div class="slider__navigator">
-            <label for="img1" class="slider__bar"></label>
-            <label for="img2" class="slider__bar"></label>
-            <label for="img3" class="slider__bar"></label>
-            <label for="img4" class="slider__bar"></label>
           </div>
         </div>
       </section>
 
-      <section class="page__section sign" id="sign">
-        <form class="sign__form" method="get" action="#" id="formId">
+      <section class="page__sign sign" id="sign">
+        <form
+          class="sign__form"
+          method="get"
+          action="#"
+          id="formId"
+        >
           <h2 class="sign__title">
             Підписка
           </h2>
@@ -208,14 +277,21 @@
             Бути в курсі всіх актуальних подій та останніх новин.
           </p>
           <div class="button button--sign">
-            <input class="
-              button__first-section
-              button__first-section--sign" type="email" placeholder="E-mail"
-              name="E-mail" required></input>
+            <input
+              class="
+                button__first-section
+                button__first-section--sign"
+              type="email"
+              placeholder="E-mail"
+              name="E-mail"
+              required
+              autocomplete="off"></input>
 
-            <button class="
-              button__second-section
-              button__second-section--sign" href="#"
+            <button
+              class="
+                button__second-section
+                button__second-section--sign"
+              href="#"
               type="submit"
               title="button"
             >
@@ -228,14 +304,15 @@
 
     <nav class="page__menu menu" id="menu">
       <div class="menu__section">
-        <div class="grid grid--tablet">
+        <div class="grid grid--tablet menu__content-container">
           <div class="
             grid__item
             grid__item--tablet-1-3
-            grid__item--desctop-1-5">
+            grid__item--desctop-2-5">
             <div class="menu__top">
               <div class="menu__cross-container">
-                <a title="link" href="#header" class="menu__cross icon icon--cross"></a>
+                <a title="link" href="#header"
+                  class="menu__cross icon icon--cross"></a>
               </div>
               <div class="grid grid--menu">
                 <a href="#gallery" class="menu__link">
@@ -299,13 +376,28 @@
           grid__item--desctop-1-1
         ">
           <div class="footer__top">
-            <a title="link" href="#header" class="footer__logo"></a>
+            <a
+              title="link"
+              href="#header"
+              class="footer__logo"></a>
 
             <div class="footer__item">
-              <a title="link" href="https://uk-ua.facebook.com/" class="footer__social-link
-                footer__social-link--fb" target="_blank" rel="noopener"></a>
-              <a title="link" href="https://www.instagram.com/" class="footer__social-link
-                footer__social-link--inst" target="_blank" rel="noopener"></a>
+              <a
+                title="link"
+                href="https://uk-ua.facebook.com/"
+                class="
+                  footer__social-link
+                  footer__social-link--fb"
+                target="_blank"
+                rel="noopener"></a>
+              <a
+                title="link"
+                href="https://www.instagram.com/"
+                class="
+                  footer__social-link
+                  footer__social-link--inst"
+                target="_blank"
+                rel="noopener"></a>
             </div>
           </div>
         </div>
@@ -351,7 +443,10 @@
               Контакти:
             </h5>
             <a href="https://goo.gl/maps/jRkUyoXexXpiaJt66"
-              class="footer__contacts" target="_blank" rel="noopener">
+              class="footer__contacts"
+              target="_blank"
+              rel="noopener"
+            >
               вул. М. Грушевського, 6; Київ, 01001<br>
             </a>
 
@@ -371,7 +466,11 @@
 
         <div class="grid__item grid__item--1-2 grid__item--tablet-2-5">
           <div class="footer__button-container">
-            <a title="link" href="#header" class="footer__button">
+            <a
+              title="link"
+              href="#header"
+              class="footer__button"
+            >
               <div class="footer___arow"></div>
             </a>
           </div>

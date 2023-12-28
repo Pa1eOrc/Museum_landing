@@ -23,6 +23,9 @@
     @include onTablet {
       background-size: cover;
     }
+
+    @include onDesctop {
+    }
   }
 
   &__menu {
@@ -30,6 +33,7 @@
     width: 18px;
     height: 12px;
     @include iconPosition;
+    transition: all 0.2s ease-in-out;
 
     z-index: 1;
     position: absolute;
@@ -43,6 +47,10 @@
 
     @include onDesctop {
       left: 58px;
+    }
+
+    &:hover {
+      transform: scale(115%);
     }
   }
 

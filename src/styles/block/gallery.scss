@@ -1,9 +1,9 @@
 .gallery {
   position: relative;
-  padding: 180px 20px 100px;
+  padding: 180px 0 100px;
 
   @include onTablet {
-    padding: 208px 34px 92px;
+    padding: 208px 0 92px;
   }
 
   @include onDesctop {
@@ -12,6 +12,10 @@
 
   &__title {
     @include theTitle;
+
+    @include onTablet {
+      padding-left: 34px;
+    }
 
     @include onDesctop {
       padding: 0 55px;

@@ -1,5 +1,6 @@
 .footer {
   padding: 50px 20px;
+  position: relative;
 
   @include onTablet {
     padding: 51px 36px 35px;
@@ -7,6 +8,16 @@
 
   @include onDesctop {
     padding: 47px 55px 35px;
+
+    &::after {
+      position: absolute;
+      top: 47px;
+      left: 53vw;
+      content: "";
+      height: 260px;
+      width: 1px;
+      background: rgba(26, 90, 76, 0.50);
+    }
   }
 
   &__top {
@@ -28,6 +39,7 @@
     width: 57px;
     height: 61px;
     @include iconPosition;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       transform: scale(1.05);
@@ -46,6 +58,7 @@
 
   &__social-link {
     @include iconPosition;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       transform: scale(1.1);
@@ -90,6 +103,7 @@
 
   &__contacts {
     line-height: 150%;
+    transition: all 0.2s ease-in-out;
     @include fontFooter;
 
     &:hover {
@@ -155,6 +169,7 @@
     width: max-content;
     line-height: 100%;
     @include fontFooter;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       text-shadow: 0 0 1px $text-color-2;
